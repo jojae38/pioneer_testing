@@ -563,7 +563,7 @@ bool Pioneer::run_camera()
                 Marker_mode=MARKER_MODE::Complete_Marker;
                 }
             else
-                {Marker_onsight.publish(TRUE_msgs);}
+                {marker_on_sight.publish(TRUE_msgs);}
             // cout <<abs(cam_pixel_x_pos-400)<<endl;
             // cout <<abs(cam_pixel_y_pos-300)<<endl;
             
@@ -959,7 +959,7 @@ void Pioneer::run_robot()
             // if(Complete_Marker_once==false)
             // {
                 pub_geometry_twist_val(marker_pose_temp);
-                marker_center.publish(TRUE_msgs);
+                // marker_center.publish(TRUE_msgs);
                 robot_marker_dis_pub.publish(marker_pose_temp);
                 // // is_marker_match();
                 // adjust_x(0.42);
